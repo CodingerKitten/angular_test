@@ -1,0 +1,10 @@
+<div class="header">
+    <div *ngIf="isLoggedIn()" class="user-greeting">
+      Hello, {{ getUsername() }}
+    </div>
+    <div class="time-display">{{ currentTime }}</div>
+    <div class="auth-action">
+      <button *ngIf="!isLoggedIn()" (click)="router.navigate(['/login'])">Login</button>
+      <button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+    </div>
+  </div>

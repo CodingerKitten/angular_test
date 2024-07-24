@@ -1,0 +1,40 @@
+.login-container {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-gap: 10px;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+  
+    .breadcrumb, .sign-in-message {
+      text-align: center;
+    }
+  
+    .login-form {
+      display: grid;
+      grid-gap: 10px;
+  
+      .form-group {
+        display: flex;
+        flex-direction: column;
+  
+        .error {
+          color: red;
+          font-size: 0.8em;
+        }
+      }
+  
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        .forgot-password {
+          background: none;
+          border: none;
+          color: blue;
+          cursor: pointer;
+        }
+      }
+    }
+  }

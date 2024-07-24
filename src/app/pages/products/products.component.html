@@ -1,0 +1,14 @@
+<div class="product-list">
+    <div *ngFor="let product of products" class="product-item">
+      <img [src]="product.imagePath" alt="Product Image">
+      <div class="product-details">
+        <h2 (click)="goToProductDetails(product.id)">{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <ul>
+          <li *ngFor="let variance of product.variances">
+            {{ variance.info }}: {{ variance.price | currency }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>

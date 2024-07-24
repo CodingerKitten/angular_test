@@ -1,0 +1,10 @@
+<div *ngIf="product" class="product-details-container">
+    <h1>{{ product.name }}</h1>
+    <img [src]="product.imagePath" alt="Product Image">
+    <p>{{ product.description }}</p>
+    <ul>
+      <li *ngFor="let variance of product.variances">
+        {{ variance.info }}: {{ variance.price | currency }}
+      </li>
+    </ul>
+  </div>

@@ -1,0 +1,26 @@
+<div class="login-container">
+    <div class="breadcrumb">
+        Log-In
+    </div>
+    <div class="sign-in-message">
+        Sign in to start your session
+    </div>
+    <form class="login-form">
+        <div class="form-group">
+            <input type="text" placeholder="Username" [formControl]="username">
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="error">
+                Username is required
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="Password" [formControl]="password">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+                Password is required
+            </div>
+        </div>
+        <div class="actions">
+            <button type="button" class="forgot-password" (click)="router.navigate(['/forget-password'])">I forgot my password</button>
+            <button type="button" (click)="onSubmit()" [disabled]="!username.valid || !password.valid">Sign In</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+.products-container {
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      .product-item {
+        margin: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        img {
+          width: 100px;
+          height: auto;
+        }
+        .product-details {
+          padding: 10px;
+          h2, p {
+            margin: 5px 0;
+          }
+          p {
+            display: -webkit-box;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
